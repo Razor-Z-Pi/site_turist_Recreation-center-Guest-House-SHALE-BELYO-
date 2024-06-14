@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: bisque;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/*Шапка сайта*/
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100px;
+    width: 100%;
+
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    color: aquamarine;
+}
+
+.image_logo {
+    width: 80px;
+    height: 80px;
+}
+
+.title_logo_text {
+    color: tomato;
+}
+
+.title_logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.point-ul-navigate {
+    display: flex; 
+}
+
+.point-navigate {
+    list-style: none;
+    margin-left: 20px;
+
+    font-size: 18px;
+}
+
+.point-navigate a {
+    color: black;
+
+    transition: color 0.3s ease-in-out;
+}
+
+.point-navigate a:hover,
+.point-navigate a:focus {
+    color: #e8cf6d;
+}
+
+
+/*Секция с титульником сайта*/
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 900px;
+
+    background-image: url("../image/title.jpg");
+    background-repeat: no-repeat;
+}
+
+.text-type-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 500px;
+}
+
+.text-type-title h1  {
+    color: white;
+    font-size: 48px;
+
+    text-align: center;
+}
+
+.type {
+
+
+    color: #e8cf6d;
+}
+
+/* Animation */
+
+.typed-cursor {
+    animation: blink 0.7s infinite;
+
+    color: #e8cf6d;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+}
+
+/*Секция с контентом*/
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    height: 900px;
+
+    background-color: white;
+}
+
+.content-info {
+    display: flex;
+    justify-content: space-around;
+
+    width: 50%;
+
+    margin-top: 20px;
+}
+
+.img_price {
+    width: 800px;
+    height: 500px;
+
+    border-radius: 20%;
+
+    transition: border-color 0.2s ease;
+    transition: border-radius 0.5s ease-in;
+}
+
+.img_price:focus,
+.img_price:hover {
+    border-color:#e8cf6d;
+    border-radius: 50%;
+}
