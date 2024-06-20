@@ -1,3 +1,5 @@
+<?php require_once "./php/link.php"?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -12,13 +14,14 @@
   <body>
     <section class="container">
       <header>
-        <a href="" style="margin: 0; padding: 0;">
+        <a href="index.php" style="margin: 0; padding: 0;">
           <img src="./image/logo.png" alt="Логотип" class="image_logo">
         </a>
 
         <div class="title_logo">БАЗА ОТДЫХА <span class="title_logo_text">"ГОСТЕВОЙ ДОМ "ШАЛЕ-БЕЛЁ"</span></div>
 
-        <ul class="point-ul-navigate">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <ul class="point-ul-navigate">         
           <li class="point-navigate"><a href="#Main">О НАС</a></li>
           <li class="point-navigate"><a href="#galleri">ГАЛЕРЕЯ</a></li>
           <li class="point-navigate"><a href="price.html">ПРАЙС-ЛИСТ</a></li>
@@ -27,6 +30,24 @@
           <li class="point-navigate"><a href="#">ДОГОВОР АРЕНДЫ</a></li>
         </ul>
       </header>
+
+      <!-- Верхний слой -->
+      <div id="myNav" class="overlay">
+
+        <!-- Кнопка для закрытия навигации наложения -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Верхний слой содержимого -->
+        <div class="overlay-content">
+          <a href="#Main">О НАС</a>
+          <a href="#galleri">ГАЛЕРЕЯ</a>
+          <a href="price.html">ПРАЙС-ЛИСТ</a>
+          <a href="#users">ОТЗЫВЫ</a>
+          <a href="#contact">КОНТАКТЫ</a>
+          <a href="#">ДОГОВОР АРЕНДЫ</a>
+        </div>
+
+      </div>
 
       <section id="Main" class="container-info">
 
@@ -101,7 +122,7 @@
             </div>
           </div>
 
-          <a href="">
+          <a href="price.html">
             <img class="img_price" src="./image/famely.gif" alt="скидка" >
           </a>
         </section>
@@ -319,49 +340,69 @@
           <div class="user" id="users">
             <h2 style="text-align: center;">ОТЗЫВЫ</h2>
 
-            <form class="user-form" action="action_page.php">
+            <form class="user-form" method="post" action="./php/server.php">
               <div class="row">
                 <div class="col-25">
-                  <label for="fname">Имя</label>
+                  <label for="fname" style="font-weight: 700;">Имя</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" id="fname" name="firstname" placeholder="Ваше имя!!!">
+                  <input type="text" id="firstname" name="user" placeholder="Ваше имя!!!" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="email">Почта</label>
+                  <label for="email" style="font-weight: 700;">Почта</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" id="email" name="email" placeholder="Ваша почта!!!">
+                  <input type="text" id="email" name="email" placeholder="Ваша почта!!!" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="title_user">Загаловок</label>
+                  <label for="title_user" style="font-weight: 700;">Загаловок</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" id="title_user" name="title_user" placeholder="Загаловок отзыва!!!">
+                  <input type="text" id="title_user" name="title" placeholder="Загаловок отзыва!!!" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="subject">Отзыв</label>
+                  <label for="subject" style="font-weight: 700;">Отзыв</label>
                 </div>
                 <div class="col-75">
-                  <textarea id="subject" name="subject" placeholder="Написать отзыв" style="height:200px"></textarea>
+                  <textarea id="subject" name="text" placeholder="Написать отзыв" style="height:200px" required></textarea>
                 </div>
               </div>
               <div class="row">
                 <input type="submit" value="Отправить">
               </div>
             </form>
+            
+            <?php
+                    $data = connect();
+                    $sql = "SELECT * FROM user";
+                    $result = $data -> query($sql);
+            ?>
+              <table>
+                <tr style="padding: 15px;">
+                  <th>Имя</th>
+                  <th>Отзыв</th>
+                  <th>Дата</th>
+                </tr>
+                <?php foreach($result as $key):?>
+                  <tr>
+                    <th style="padding: 15px;"><?=$key["name"]?></th>
+                    <th style="padding: 15px;"><?=$key["text"]?></th>
+                    <th style="padding: 15px;"><?=$key["data"]?></th>
+                  </tr>
+                <?php endforeach?>
+              </table>
           </div>
         </section>
       </main>
       
       <footer class="footer">
-        <a href="#" style="margin: 0; padding: 0;">
+        <a href="#Main" style="margin: 0; padding: 0;">
           <img src="./image/logo.png" alt="Логотип" class="image_logo">
         </a>
 
@@ -375,5 +416,7 @@
     <script src="./js/photo.js"></script>
     <script src="./js/text-title.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/burger.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcwWP0pAAAAAL8VaryuFi8jUjq4Q3-pT5GFnBmI"></script>  
   </body>
 </html>
