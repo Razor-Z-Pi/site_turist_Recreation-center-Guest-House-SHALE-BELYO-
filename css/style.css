@@ -395,14 +395,23 @@ main {
 }
 
 .show {
-    display: block;
+    display: none;
     position: absolute;
 
-    z-index: 1;
-    width: 80%;
-    height: 80%;
+    z-index: 99;
+    width: 700px;
+    height: 700px;
+}
 
-    background: grey;
+  
+/* Закрываемая кнопка внутри изображения */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 /*Секция с контактами*/
@@ -538,6 +547,166 @@ input[type=submit] {
 .footer-point:focus {
     border-bottom: 3px solid #e8cf6d;
     color: #e8cf6d;
+}
+
+/*ПРАЙС-ЛИСТ*/
+
+.price {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 50px;
+}
+
+table {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  border: 1px solid #ddd;
+}
+
+tr {
+    text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+td {
+ text-align: left;
+
+ padding: 20px;
+}
+
+.number-room {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 0;
+}
+
+.td-count-room {
+    text-align: center;
+}
+
+container-galleri-slider {
+    max-width: 800px;
+    max-height: 500px;
+}
+
+/* Контейнер слайд-шоу */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+  
+/* Скрыть изображения по умолчанию */
+.mySlides {
+    display: none;
+}
+  
+/* Вперед иназад кнопки */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Положение "next кнопки" справа */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* При наведении курсора добавьте черный цвет фона с немного прозрачным */
+.prev:hover,
+.prev:focus, 
+.next:hover,
+.next:focus {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Подпись текст */
+.text {
+    color: #e8cf6d;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Номер текста (1/3 и т.д.) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+   
+/* Точки/индикаторы */
+.dot {
+    display: inline-block;
+
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+
+    transition: background-color 0.6s ease;
+}
+  
+.active, 
+.dot:hover,
+.dot:focus {
+    background-color: #717171;
+}
+  
+/* Исчезающая анимация */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
   
 /* Адаптивный макет - когда экран меньше 600 пикселей в ширину, сделайте два столбца укладываются друг на друга, а не рядом друг с другом */

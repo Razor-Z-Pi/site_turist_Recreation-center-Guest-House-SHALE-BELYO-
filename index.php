@@ -21,7 +21,7 @@
         <ul class="point-ul-navigate">
           <li class="point-navigate"><a href="#Main">О НАС</a></li>
           <li class="point-navigate"><a href="#galleri">ГАЛЕРЕЯ</a></li>
-          <li class="point-navigate"><a href="#">ПРАЙС-ЛИСТ</a></li>
+          <li class="point-navigate"><a href="price.html">ПРАЙС-ЛИСТ</a></li>
           <li class="point-navigate"><a href="#users">ОТЗЫВЫ</a></li>
           <li class="point-navigate"><a href="#contact">КОНТАКТЫ</a></li>
           <li class="point-navigate"><a href="#">ДОГОВОР АРЕНДЫ</a></li>
@@ -109,23 +109,32 @@
         <section id="galleri" class="galleri">
           <h2 style="text-align: center;">ГАЛЕРЕЯ</h2>
 
+          <!-- Расширяющийся контейнер изображений -->
+          <div class="show">
+            <!-- Закрытое изображение -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Развернутое изображение -->
+            <img id="expandedImg">
+          </div>
+
           <div class="galleri-slider-reverse">
             <button type="button" class="collapsible">Квартира №1, 30 кв. м
               спальня — 4 сп. места и 2 доп., кухня, сан. узел</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/roms/1/1.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/2.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/3.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/4.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/5.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/6.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/7.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/8.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/9.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/10.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/11.jpg" alt="">
-                <img class="img_photo" src="./image/roms/1/12.jpg" alt="">
+                <img class="img_photo" src="./image/roms/1/1.jpg" alt="" onclick="photoOpen(0)">
+                <img class="img_photo" src="./image/roms/1/2.jpg" alt="" onclick="photoOpen(1)">
+                <img class="img_photo" src="./image/roms/1/3.jpg" alt="" onclick="photoOpen(2)">
+                <img class="img_photo" src="./image/roms/1/4.jpg" alt="" onclick="photoOpen(3)">
+                <img class="img_photo" src="./image/roms/1/5.jpg" alt="" onclick="photoOpen(4)">
+                <img class="img_photo" src="./image/roms/1/6.jpg" alt="" onclick="photoOpen(5)">
+                <img class="img_photo" src="./image/roms/1/7.jpg" alt="" onclick="photoOpen(6)">
+                <img class="img_photo" src="./image/roms/1/8.jpg" alt="" onclick="photoOpen(7)">
+                <img class="img_photo" src="./image/roms/1/9.jpg" alt="" onclick="photoOpen(8)">
+                <img class="img_photo" src="./image/roms/1/10.jpg" alt="" onclick="photoOpen(9)">
+                <img class="img_photo" src="./image/roms/1/11.jpg" alt="" onclick="photoOpen(10)">
+                <img class="img_photo" src="./image/roms/1/12.jpg" alt="" onclick="photoOpen(11)">
               </div>
             </div>
 
@@ -133,14 +142,14 @@
               спальня — 4 сп. места и 2 доп., кухня, сан. узел</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/roms/2/1.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/2.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/3.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/4.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/5.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/6.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/7.jpg" alt="">
-                <img class="img_photo" src="./image/roms/2/8.jpg" alt="">
+                <img class="img_photo" src="./image/roms/2/1.jpg" alt="" onclick="photoOpen(12)">
+                <img class="img_photo" src="./image/roms/2/2.jpg" alt="" onclick="photoOpen(13)">
+                <img class="img_photo" src="./image/roms/2/3.jpg" alt="" onclick="photoOpen(14)">
+                <img class="img_photo" src="./image/roms/2/4.jpg" alt="" onclick="photoOpen(15)">
+                <img class="img_photo" src="./image/roms/2/5.jpg" alt="" onclick="photoOpen(16)">
+                <img class="img_photo" src="./image/roms/2/6.jpg" alt="" onclick="photoOpen(17)">
+                <img class="img_photo" src="./image/roms/2/7.jpg" alt="" onclick="photoOpen(18)">
+                <img class="img_photo" src="./image/roms/2/8.jpg" alt="" onclick="photoOpen(19)">
               </div>
             </div>
 
@@ -148,17 +157,17 @@
               2 спальни по 4 сп. места и 1 доп., кухня, сан. узел</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/roms/3/1.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/2.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/3.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/4.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/5.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/6.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/7.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/8.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/9.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/10.jpg" alt="">
-                <img class="img_photo" src="./image/roms/3/11.jpg" alt="">
+                <img class="img_photo" src="./image/roms/3/1.jpg" alt="" onclick="photoOpen(20)">
+                <img class="img_photo" src="./image/roms/3/2.jpg" alt="" onclick="photoOpen(21)">
+                <img class="img_photo" src="./image/roms/3/3.jpg" alt="" onclick="photoOpen(22)">
+                <img class="img_photo" src="./image/roms/3/4.jpg" alt="" onclick="photoOpen(23)">
+                <img class="img_photo" src="./image/roms/3/5.jpg" alt="" onclick="photoOpen(24)">
+                <img class="img_photo" src="./image/roms/3/6.jpg" alt="" onclick="photoOpen(25)">
+                <img class="img_photo" src="./image/roms/3/7.jpg" alt="" onclick="photoOpen(26)">
+                <img class="img_photo" src="./image/roms/3/8.jpg" alt="" onclick="photoOpen(27)">
+                <img class="img_photo" src="./image/roms/3/9.jpg" alt="" onclick="photoOpen(28)"> 
+                <img class="img_photo" src="./image/roms/3/10.jpg" alt="" onclick="photoOpen(29)">
+                <img class="img_photo" src="./image/roms/3/11.jpg" alt="" onclick="photoOpen(30)">
               </div>
             </div>
 
@@ -166,14 +175,14 @@
               спальня — 4 сп. места, кухня, совмещённая с соседней комнатой, сан. узел</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/roms/4/1.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/2.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/3.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/4.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/5.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/6.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/7.jpg" alt="">
-                <img class="img_photo" src="./image/roms/4/8.jpg" alt="">
+                <img class="img_photo" src="./image/roms/4/1.jpg" alt="" onclick="photoOpen(31)">
+                <img class="img_photo" src="./image/roms/4/2.jpg" alt="" onclick="photoOpen(32)">
+                <img class="img_photo" src="./image/roms/4/3.jpg" alt="" onclick="photoOpen(33)">
+                <img class="img_photo" src="./image/roms/4/4.jpg" alt="" onclick="photoOpen(34)">
+                <img class="img_photo" src="./image/roms/4/5.jpg" alt="" onclick="photoOpen(35)">
+                <img class="img_photo" src="./image/roms/4/6.jpg" alt="" onclick="photoOpen(36)">
+                <img class="img_photo" src="./image/roms/4/7.jpg" alt="" onclick="photoOpen(37)">
+                <img class="img_photo" src="./image/roms/4/8.jpg" alt="" onclick="photoOpen(38)">
               </div>
             </div>
 
@@ -181,14 +190,14 @@
               спальня — 4 сп. места, кухня, совмещённая с соседней комнатой, сан. узел</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/roms/5/1.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/2.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/3.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/4.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/5.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/6.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/7.jpg" alt="">
-                <img class="img_photo" src="./image/roms/5/8.jpg" alt="">
+                <img class="img_photo" src="./image/roms/5/1.jpg" alt="" onclick="photoOpen(39)">
+                <img class="img_photo" src="./image/roms/5/2.jpg" alt="" onclick="photoOpen(40)">
+                <img class="img_photo" src="./image/roms/5/3.jpg" alt="" onclick="photoOpen(41)">
+                <img class="img_photo" src="./image/roms/5/4.jpg" alt="" onclick="photoOpen(42)">
+                <img class="img_photo" src="./image/roms/5/5.jpg" alt="" onclick="photoOpen(43)">
+                <img class="img_photo" src="./image/roms/5/6.jpg" alt="" onclick="photoOpen(44)">
+                <img class="img_photo" src="./image/roms/5/7.jpg" alt="" onclick="photoOpen(45)">
+                <img class="img_photo" src="./image/roms/5/8.jpg" alt="" onclick="photoOpen(46)">
               </div>
             </div>
 
@@ -196,25 +205,25 @@
               Новые домики Мини-шале из 2-х номеров, каждый номер по 9 м кв, рассчитан на 2 сп. места и 1 доп. детское.</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/roms/6/1.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/2.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/3.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/4.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/5.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/6.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/7.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/8.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/9.jpg" alt="">
-                <img class="img_photo" src="./image/roms/6/10.jpg" alt="">
+                <img class="img_photo" src="./image/roms/6/1.jpg" alt="" onclick="photoOpen(47)">
+                <img class="img_photo" src="./image/roms/6/2.jpg" alt="" onclick="photoOpen(48)">
+                <img class="img_photo" src="./image/roms/6/3.jpg" alt="" onclick="photoOpen(49)">
+                <img class="img_photo" src="./image/roms/6/4.jpg" alt="" onclick="photoOpen(50)">
+                <img class="img_photo" src="./image/roms/6/5.jpg" alt="" onclick="photoOpen(51)">
+                <img class="img_photo" src="./image/roms/6/6.jpg" alt="" onclick="photoOpen(52)">
+                <img class="img_photo" src="./image/roms/6/7.jpg" alt="" onclick="photoOpen(53)">
+                <img class="img_photo" src="./image/roms/6/8.jpg" alt="" onclick="photoOpen(54)">
+                <img class="img_photo" src="./image/roms/6/9.jpg" alt="" onclick="photoOpen(55)">
+                <img class="img_photo" src="./image/roms/6/10.jpg" alt="" onclick="photoOpen(56)">
               </div>
             </div>
 
             <button type="button" class="collapsible">С лёгким паром!</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/smoge/1.jpg" alt="">
-                <img class="img_photo" src="./image/smoge/2.jpg" alt="">
-                <img class="img_photo" src="./image/smoge/3.jpg" alt="">
+                <img class="img_photo" src="./image/smoge/1.jpg" alt="" onclick="photoOpen(57)">
+                <img class="img_photo" src="./image/smoge/2.jpg" alt="" onclick="photoOpen(58)">
+                <img class="img_photo" src="./image/smoge/3.jpg" alt="" onclick="photoOpen(59)">
               </div>
             </div>
 
@@ -222,28 +231,28 @@
               Приятный досуг на нашей территории</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/info/1.jpg" alt="">
-                <img class="img_photo" src="./image/info/2.jpg" alt="">
-                <img class="img_photo" src="./image/info/3.jpg" alt="">
-                <img class="img_photo" src="./image/info/4.jpg" alt="">
-                <img class="img_photo" src="./image/info/5.jpg" alt="">
-                <img class="img_photo" src="./image/info/6.jpg" alt="">
-                <img class="img_photo" src="./image/info/7.jpg" alt="">
-                <img class="img_photo" src="./image/info/8.jpg" alt="">
-                <img class="img_photo" src="./image/info/9.jpg" alt="">
-                <img class="img_photo" src="./image/info/10.jpg" alt="">
-                <img class="img_photo" src="./image/info/11.jpg" alt="">
-                <img class="img_photo" src="./image/info/12.jpg" alt="">
-                <img class="img_photo" src="./image/info/13.jpg" alt="">
-                <img class="img_photo" src="./image/info/14.jpg" alt="">
-                <img class="img_photo" src="./image/info/15.jpg" alt="">
-                <img class="img_photo" src="./image/info/16.jpg" alt="">
-                <img class="img_photo" src="./image/info/17.jpg" alt="">
-                <img class="img_photo" src="./image/info/18.jpg" alt="">
-                <img class="img_photo" src="./image/info/19.jpg" alt="">
-                <img class="img_photo" src="./image/info/20.jpg" alt="">
-                <img class="img_photo" src="./image/info/21.jpg" alt="">
-                <img class="img_photo" src="./image/info/22.jpg" alt="">
+                <img class="img_photo" src="./image/info/1.jpg" alt="" onclick="photoOpen(60)">
+                <img class="img_photo" src="./image/info/2.jpg" alt="" onclick="photoOpen(61)">
+                <img class="img_photo" src="./image/info/3.jpg" alt="" onclick="photoOpen(62)">
+                <img class="img_photo" src="./image/info/4.jpg" alt="" onclick="photoOpen(63)">
+                <img class="img_photo" src="./image/info/5.jpg" alt="" onclick="photoOpen(64)">
+                <img class="img_photo" src="./image/info/6.jpg" alt="" onclick="photoOpen(65)">
+                <img class="img_photo" src="./image/info/7.jpg" alt="" onclick="photoOpen(66)">
+                <img class="img_photo" src="./image/info/8.jpg" alt="" onclick="photoOpen(67)">
+                <img class="img_photo" src="./image/info/9.jpg" alt="" onclick="photoOpen(68)">
+                <img class="img_photo" src="./image/info/10.jpg" alt="" onclick="photoOpen(69)">
+                <img class="img_photo" src="./image/info/11.jpg" alt="" onclick="photoOpen(70)">
+                <img class="img_photo" src="./image/info/12.jpg" alt="" onclick="photoOpen(71)">
+                <img class="img_photo" src="./image/info/13.jpg" alt="" onclick="photoOpen(72)">
+                <img class="img_photo" src="./image/info/14.jpg" alt="" onclick="photoOpen(73)">
+                <img class="img_photo" src="./image/info/15.jpg" alt="" onclick="photoOpen(74)">
+                <img class="img_photo" src="./image/info/16.jpg" alt="" onclick="photoOpen(75)">
+                <img class="img_photo" src="./image/info/17.jpg" alt="" onclick="photoOpen(76)">
+                <img class="img_photo" src="./image/info/18.jpg" alt="" onclick="photoOpen(77)">
+                <img class="img_photo" src="./image/info/19.jpg" alt="" onclick="photoOpen(78)">
+                <img class="img_photo" src="./image/info/20.jpg" alt="" onclick="photoOpen(79)">
+                <img class="img_photo" src="./image/info/21.jpg" alt="" onclick="photoOpen(80)">
+                <img class="img_photo" src="./image/info/22.jpg" alt="" onclick="photoOpen(81)">
               </div>
             </div>
 
@@ -251,27 +260,27 @@
               Красивая природа, свежий воздух, теплое озеро и многое другое ждет вас на нашем озере Белё</button>
             <div class="content-galleri">
               <div class="photo-result">
-                <img class="img_photo" src="./image/viewIMG/1.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/2.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/3.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/4.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/5.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/6.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/7.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/8.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/9.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/10.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/11.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/12.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/13.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/14.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/15.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/16.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/17.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/18.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/19.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/20.jpg" alt="">
-                <img class="img_photo" src="./image/viewIMG/21.jpg" alt="">
+                <img class="img_photo" src="./image/viewIMG/1.jpg" alt="" onclick="photoOpen(82)">
+                <img class="img_photo" src="./image/viewIMG/2.jpg" alt="" onclick="photoOpen(83)">
+                <img class="img_photo" src="./image/viewIMG/3.jpg" alt="" onclick="photoOpen(84)">
+                <img class="img_photo" src="./image/viewIMG/4.jpg" alt="" onclick="photoOpen(85)">
+                <img class="img_photo" src="./image/viewIMG/5.jpg" alt="" onclick="photoOpen(86)">
+                <img class="img_photo" src="./image/viewIMG/6.jpg" alt="" onclick="photoOpen(87)">
+                <img class="img_photo" src="./image/viewIMG/7.jpg" alt="" onclick="photoOpen(88)">
+                <img class="img_photo" src="./image/viewIMG/8.jpg" alt="" onclick="photoOpen(89)">
+                <img class="img_photo" src="./image/viewIMG/9.jpg" alt="" onclick="photoOpen(90)">
+                <img class="img_photo" src="./image/viewIMG/10.jpg" alt="" onclick="photoOpen(91)">
+                <img class="img_photo" src="./image/viewIMG/11.jpg" alt="" onclick="photoOpen(92)">
+                <img class="img_photo" src="./image/viewIMG/12.jpg" alt="" onclick="photoOpen(93)">
+                <img class="img_photo" src="./image/viewIMG/13.jpg" alt="" onclick="photoOpen(94)">
+                <img class="img_photo" src="./image/viewIMG/14.jpg" alt="" onclick="photoOpen(95)">
+                <img class="img_photo" src="./image/viewIMG/15.jpg" alt="" onclick="photoOpen(96)">
+                <img class="img_photo" src="./image/viewIMG/16.jpg" alt="" onclick="photoOpen(97)">
+                <img class="img_photo" src="./image/viewIMG/17.jpg" alt="" onclick="photoOpen(98)">
+                <img class="img_photo" src="./image/viewIMG/18.jpg" alt="" onclick="photoOpen(99)">
+                <img class="img_photo" src="./image/viewIMG/19.jpg" alt="" onclick="photoOpen(100)">
+                <img class="img_photo" src="./image/viewIMG/20.jpg" alt="" onclick="photoOpen(101)">
+                <img class="img_photo" src="./image/viewIMG/21.jpg" alt="" onclick="photoOpen(102)">
               </div>
           </div>
         </section>
