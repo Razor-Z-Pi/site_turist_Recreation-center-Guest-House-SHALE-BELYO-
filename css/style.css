@@ -270,26 +270,28 @@ main {
     padding: 20px;
 
     border-radius: 10%;
-    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 1px 5px 5px grey;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .col1:hover,
 .col1:focus {
-    box-shadow: 1px 5px 5px grey;
+    background-color: #e8cf6d;
 }
 
 .col2 {
     padding: 10px;
 
-    border-radius: 10%;
-    transition: box-shadow 0.5s ease-in-out;
-
     text-align: center;
+    border-radius: 10%;
+    box-shadow: 1px 5px 5px grey;
+
+    transition: background-color 0.5s ease-in-out;
 }
 
 .col2:hover,
 .col2:focus {
-    box-shadow: 1px 5px 5px grey;
+    background-color: #e8cf6d;
 }
 
 .img_price {
@@ -306,26 +308,6 @@ main {
 .img_price:hover {
     border-color:#e8cf6d;
     border-radius: 50%;
-
-    /* Запустите анимацию встряхивания и сделайте так, чтобы анимация длилась 0,5 секунды */
-    animation: shake 0.5s;
-
-    /* Когда анимация будет закончена, начните снова */
-    animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 /*Секция с галереей*/
@@ -410,6 +392,17 @@ main {
 .img_photo:hover,
 .img_photo:focus {
     transform: scale(1.5); /* (150% зум - Примечание: если масштаб слишком велик, он будет выходить за пределы видового экрана) */
+}
+
+.show {
+    display: block;
+    position: absolute;
+
+    z-index: 1;
+    width: 80%;
+    height: 80%;
+
+    background: grey;
 }
 
 /*Секция с контактами*/
