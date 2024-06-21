@@ -29,25 +29,16 @@
           <li class="point-navigate"><a href="#contact">КОНТАКТЫ</a></li>
           <li class="point-navigate"><a href="#">ДОГОВОР АРЕНДЫ</a></li>
         </ul>
+
+          <div id="myLinks">
+            <a href="#Main" onclick="openNav()">О НАС</a>
+            <a href="#galleri" onclick="openNav()">ГАЛЕРЕЯ</a>
+            <a href="price.html" onclick="openNav()">ПРАЙС-ЛИСТ</a>
+            <a href="#users" onclick="openNav()">ОТЗЫВЫ</a>
+            <a href="#contact" onclick="openNav()">КОНТАКТЫ</a>
+            <a href="#" onclick="openNav()">ДОГОВОР АРЕНДЫ</a>
+          </div>
       </header>
-
-      <!-- Верхний слой -->
-      <div id="myNav" class="overlay">
-
-        <!-- Кнопка для закрытия навигации наложения -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-        <!-- Верхний слой содержимого -->
-        <div class="overlay-content">
-          <a href="#Main">О НАС</a>
-          <a href="#galleri">ГАЛЕРЕЯ</a>
-          <a href="price.html">ПРАЙС-ЛИСТ</a>
-          <a href="#users">ОТЗЫВЫ</a>
-          <a href="#contact">КОНТАКТЫ</a>
-          <a href="#">ДОГОВОР АРЕНДЫ</a>
-        </div>
-
-      </div>
 
       <section id="Main" class="container-info">
 
@@ -406,17 +397,17 @@
           <img src="./image/logo.png" alt="Логотип" class="image_logo">
         </a>
 
-        <div class="title_logo_header">БАЗА ОТДЫХА <span class="title_logo_text">"ГОСТЕВОЙ ДОМ "ШАЛЕ-БЕЛЁ"</span></div>
+        <div class="title_logo_header title_logo">БАЗА ОТДЫХА <span class="title_logo_text">"ГОСТЕВОЙ ДОМ "ШАЛЕ-БЕЛЁ"</span></div>
 
         <a href="#Main" class="footer-point">В НАЧАЛО</a>
       </footer>
     </section> 
-    
+
+    <script src="./js/burger.js"></script>
     <script src="./js/galleri-content.js"></script>
     <script src="./js/photo.js"></script>
     <script src="./js/text-title.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/burger.js"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcwWP0pAAAAAL8VaryuFi8jUjq4Q3-pT5GFnBmI"></script>  
   </body>
 </html>
